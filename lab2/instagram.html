@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://images.seeklogo.com/logo-png/30/2/instagram-new-2016-logo-png_seeklogo-302599.png" width="300px" height="">
+
+    <title>Instagram</title>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1c1e21;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    gap: 40px;
+    flex: 1;
+    width: 100%;
+}
+.logo {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+}
+.left {
+    flex: 1;
+    padding-top: 20px;
+    text-align: center;
+}
+.right {
+    font-family: sans-serif;
+    border-left: 2px solid lightgray;
+    padding: 70px 40px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right input{
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    margin-bottom: 12px;
+}
+.right button{
+    width: 100%;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid lightgray;
+    margin-bottom: 12px;
+}
+.login-part {
+    margin-bottom: 50px;
+}
+.login-part a {
+    display: block;
+    text-align: center;
+    color: #1c1e21;
+    text-decoration: none;
+    margin-top: 6px;
+}
+.login-part p {
+    margin-bottom: 10px;
+}
+.login-part a:hover {
+    text-decoration: underline;
+}
+.login {
+    background-color: rgb(0, 136, 244)  ;
+    color: white;
+    text-align: center;
+}
+.facebook {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+.facebook a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #1c1e21;
+    font-size: 14px;
+}
+.other-part button {
+    border-color: rgb(0, 136, 244);
+}
+.new-acc {
+    background-color: white;
+    border-color: rgb(0, 136, 244);
+    color: rgb(0, 136, 244);
+}
+.meta {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #1c1e21;
+    font-size: 14px;
+}
+.gradient{
+    background: linear-gradient(to right, orange, red, purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline;
+}
+.footer {
+    border-top: 1px solid lightgray;
+    padding: 20px;
+    color: gray;
+    text-decoration: None;
+    font-size: 12px;
+    text-align: center;
+}
+.footer a{
+    color: gray;
+    text-decoration: None;
+    margin: 8px;
+    font-size: 12px;
+}
+.footer-links {
+    margin: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="https://images.seeklogo.com/logo-png/30/2/instagram-new-2016-logo-png_seeklogo-302599.png" height="50px">
+    </div>
+    <div class="container">
+        <div class="left">
+            <h1><br><br>Посмотрите, какими <br> моментами из жизни <br> поделились ваши <span class="gradient">близкие  <br> друзья</span>.</h1>
+            <img src="https://static.cdninstagram.com/rsrc.php/v4/yF/r/reN9rvYdLTB.png" height="500px">
+        </div>
+        <div class="right">
+            <div class="login-part">
+                <p>Войти в Instagram</p>
+                <input type="text" placeholder="Имя пользователя, номер молбильного телефона или электронная почта">
+                <input type="password" placeholder="Пароль">
+                <button class="login">Войти</button>
+                <a href="#">Забыли пароль?</a>
+            </div>
+            <div class="other-part">
+                <div class="facebook">
+                    <a href="#">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/500px-Facebook_Logo_%282019%29.png" height="20px">
+                        <p>Войти через Facebook</p>
+                    </a>
+                </div>
+                <button class="new-acc">Создать новый аккаунт</button>
+                <div class="meta">
+                        <img src="https://cdn.pixabay.com/photo/2021/12/14/22/29/meta-6871457_1280.png" height="30px">
+                        <p>Meta</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Meta</a>
+            <a href="#">Информация</a>
+            <a href="#">Блог</a>
+            <a href="#">Вакансии</a>
+            <a href="#">Помощь</a>
+            <a href="#">API</a>
+            <a href="#">конфиденциальность</a>
+            <a href="#">Условия</a>
+            <a href="#">Места</a>
+            <a href="#">Instagram Life</a>
+            <a href="#">Meta AI</a>
+            <a href="#">Threads</a>
+            <a href="#">Загрузка контактов и лиц, не являющихся пользователями</a>
+            <a href="#">Meta Verified</a>
+        </div>
+        <div class="footer-meta">© 2026 Instagram from Meta</div>
+    </footer>
+
+</body>
+</html>

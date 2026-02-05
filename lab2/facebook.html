@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook - вход</title>
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/056/006/607/non_2x/facebook-logo-icon-file-free-png.png" width="300px" height="">
+    <style> 
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        body {
+            background: #f0f2f5;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 80px;
+        }
+
+
+        .left h3 {
+            color: #1877f2;
+            font-size: 56px;
+            margin-bottom: 10px;
+        }
+
+        .left p {
+            font-size: 22px;
+            max-width: 450px;
+        }
+
+        .login-box {
+            background: #fff;
+            width:380px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .login-btn {
+            width: 100%;
+            background: #1877f2;
+            color: white;
+            font-size: 18px;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #166fe5;
+        }
+
+        .forgot {
+            display: block;
+            text-align: center;
+            margin: 15px 0;
+            color: #1877f2;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        hr {
+            margin: 20px 0;
+        }
+
+        .create-btn {
+            display: block;
+            margin: 0 auto;
+            background: #42b72a;
+            color: white;
+            font-size: 16px;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .create-btn:hover {
+            background: #36a420;
+        }
+
+        .page-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+</style>
+</head>
+
+<body>
+    <div class = "container">
+
+        <div class = "left">
+            <h3>facebook</h3>
+            <p> Facebook помогает вам всегда <br> 
+            оставаться на связи и общаться со <br>
+            своими знакомыми.</p>
+        </div>
+
+        <div class = "right">
+
+            <form class="login-box">
+                <input type="text" placeholder="Электронный адрес или номер телефона">
+                <input type="password" placeholder="Пароль">
+                <button class="login-btn">Вход</button>
+                <a href="#" class="forgot">Забыли пароль?</a>
+                <hr>
+                <button class="create-btn">Создать новый аккаунт</button>
+            </form>
+            
+            <p class="page-link">
+                <strong>Создать Страницу</strong> знаменитости, музыкальной группы или <br> компании.
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
