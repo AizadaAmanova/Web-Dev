@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Pricing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="https://avatars.mds.yandex.net/i?id=7a348c205595d38ba90c220babd726b2_l-12945752-images-thumbs&n=13">
+  <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body{
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Open Sans","Helvetica Neue",sans-serif;
+      color:#24292f;
+      background:#fff;
+    }
+
+    .wrap{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px 80px;
+    }
+
+    /* NAV */
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding: 12px 0 28px;
+    }
+    .left-bar{ display:flex; align-items:center; gap:16px; }
+    .left-bar img{ display:block; }
+    .nav ul{
+      list-style:none;
+      display:flex;
+      gap: 6px;
+      flex-wrap:wrap;
+    }
+    .nav li{
+      padding: 8px;
+      font-size: 14px;
+      color:#24292f;
+    }
+
+    .right-bar{ display:flex; align-items:center; gap:10px; }
+    .search{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      width: 320px;
+      height: 32px;
+      padding: 0 10px;
+      border: 1px solid rgba(209,217,224,0.9);
+      border-radius: 8px;
+      color:#57606a;
+      font-size: 14px;
+    }
+    .search-text{ display:flex; align-items:center; gap:8px; }
+    .slash{
+      width: 22px; height: 22px;
+      border-radius: 6px;
+      border: 1px solid rgba(209,217,224,0.9);
+      display:flex; align-items:center; justify-content:center;
+      color:#57606a;
+    }
+    .line{ width:1px; height:20px; background:#d0d7de; margin:0 4px; }
+    .dash{
+      border:1px solid #d0d7de;
+      background: transparent;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    /* HERO */
+    .hero{
+      text-align:center;
+      padding: 36px 0 22px;
+    }
+    .hero h1{
+      font-family: "Mona Sans", system-ui, sans-serif;
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.05;
+      margin-bottom: 14px;
+    }
+    .hero p{
+      max-width: 900px;
+      margin: 0 auto 20px;
+      color:#57606a;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .cta{
+      display:inline-block;
+      background: linear-gradient(rgb(61,61,61), #000);
+      color:#fff;
+      text-decoration:none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    /* PRICING CARDS */
+    .cards{
+      margin-top: 26px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+    .card{
+      border: 1px solid #d0d7de;
+      border-radius: 12px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow: 0 10px 20px rgba(27,31,36,0.12);
+      display:flex;
+      flex-direction:column;
+      min-height: 640px;
+    }
+
+    .card-top{
+      padding: 22px 18px 14px;
+      text-align:center;
+    }
+    .card-top h2{
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .card-top p{
+      color:#57606a;
+      font-size: 14px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .price{
+      display:flex;
+      align-items:flex-end;
+      justify-content:center;
+      gap:6px;
+      margin-top: 6px;
+      margin-bottom: 12px;
+      font-family: "Mona Sans", system-ui, sans-serif;
+    }
+    .price sup{
+      color:#8c959f;
+      font-size: 18px;
+      position: relative;
+      top: -16px;
+    }
+    .price .num{ font-size: 44px; font-weight: 700; letter-spacing:-0.5px; }
+    .price .usd{ font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+    .price .per{ color:#57606a; font-size: 14px; margin-bottom: 8px; }
+
+    .btnrow{
+      display:flex;
+      gap:12px;
+      padding: 0 18px 18px;
+    }
+    .btn{
+      display:block;
+      width:100%;
+      text-align:center;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration:none;
+      border:1px solid #d0d7de;
+    }
+    .btn.white{ background:#fff; color:#24292f; }
+    .btn.black{ background: linear-gradient(rgb(61,61,61), #000); color:#fff; border:0; }
+
+    .card-body{
+      background:#f6f8fa;
+      border-top: 1px solid #eaeef2;
+      padding: 14px 16px 18px;
+      flex:1;
+    }
+
+    .note{
+      text-align:left;
+      font-size: 14px;
+      color:#24292f;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    details{ border:0; }
+    summary{
+      list-style:none;
+      cursor:pointer;
+      font-weight:700;
+      color:#57606a;
+      display:flex;
+      align-items:flex-start;
+      gap:8px;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    summary::before{
+      content:"›";
+      color:#57606a;
+      font-size: 18px;
+      transform: translateY(-2px);
+      transition: transform .15s ease;
+    }
+    details[open] summary::before{ transform: rotate(90deg); }
+    .detail-body{
+      color:#57606a;
+      font-size: 14px;
+      line-height: 1.45;
+      padding: 0 0 10px 26px;
+    }
+
+    /* ENTERPRISE highlight (blue frame like screenshot) */
+    .card.recommended{
+      border: 2px solid #0969da;
+      box-shadow: 0 12px 28px rgba(27,31,36,0.18);
+      position: relative;
+    }
+    .badge{
+      position:absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background:#0969da;
+      color:#fff;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: .4px;
+      text-transform: uppercase;
+    }
+    .starting{
+      display:inline-block;
+      margin-top: 4px;
+      margin-bottom: 6px;
+      font-size: 12px;
+      padding: 4px 12px;
+      border: 1px solid #d0d7de;
+      border-radius: 999px;
+      color:#24292f;
+      background:#fff;
+    }
+
+    /* ADDONS */
+    .addons{
+      margin-top: 70px;
+      text-align:center;
+    }
+    .addons h2{
+      font-family:"Mona Sans", system-ui, sans-serif;
+      font-size: 56px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 22px;
+    }
+    .addon-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 10px;
+    }
+    .addon-card{
+      border: 1px solid #d0d7de;
+      border-radius: 10px;
+      padding: 24px;
+      text-align:left;
+      box-shadow: 0 4px 12px rgba(27,31,36,0.08);
+      transition: .2s ease;
+      background:#fff;
+    }
+    .addon-card:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 10px 18px rgba(27,31,36,0.14);
+    }
+    .addon-icon{
+      width: 44px; height: 44px;
+      border-radius: 999px;
+      background:#eef1f4;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom: 12px;
+      overflow:hidden;
+    }
+    .addon-icon img{ width: 26px; height: 26px; object-fit:contain; }
+    .addon-card h3{
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .addon-card p{
+      color:#57606a;
+      font-size: 15px;
+      line-height: 1.45;
+      margin-bottom: 10px;
+    }
+    .addon-card a{
+      text-decoration:none;
+      color:#24292f;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px){
+      .search{ width: 240px; }
+      .cards{ grid-template-columns: 1fr; }
+      .addon-grid{ grid-template-columns: 1fr; }
+      .hero h1{ font-size: 40px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- NAV -->
+    <div class="nav">
+      <div class="left-bar">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" height="28">
+        <ul>
+          <li>Platform</li>
+          <li>Solutions</li>
+          <li>Resources</li>
+          <li>Open Source</li>
+          <li>Enterprise</li>
+          <li>Pricing</li>
+        </ul>
+      </div>
+
+      <div class="right-bar">
+        <div class="search">
+          <div class="search-text">
+            <span>🔍</span>
+            <span>Search or jump to...</span>
+          </div>
+          <div class="slash">/</div>
+        </div>
+        <div class="line"></div>
+        <button class="dash">Dashboard</button>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero">
+      <h1>Try the Copilot-powered platform</h1>
+      <p>
+        We get it, there's a lot you can do with GitHub. That's why we've packed all of it into a single risk-free trial
+        that includes GitHub Enterprise, Copilot, and Advanced Security.
+      </p>
+      <a class="cta" href="#">Start free for 30 days</a>
+    </header>
+
+    <!-- PRICING -->
+    <section class="cards" aria-label="Pricing plans">
+
+      <!-- FREE -->
+      <div class="card">
+        <div class="card-top">
+          <h2>Free</h2>
+          <p>The basics for individuals<br>and organizations</p>
+
+          <div class="price">
+            <sup>$</sup><span class="num">0</span><span class="usd">USD</span><span class="per">per user/month</span>
+          </div>
+        </div>
+
+        <div class="btnrow">
+          <a class="btn white" href="#">Join for free</a>
+        </div>
+
+        <div class="card-body">
+          <details>
+            <summary>Unlimited public/private repositories</summary>
+            <div class="detail-body">
+              Host open source projects in public GitHub repositories, accessible via web or command line.
+            </div>
+          </details>
+
+          <details>
+            <summary>Dependabot security and version updates</summary>
+            <div class="detail-body">
+              Automatically open pull requests to update vulnerable dependencies and keep them up to date.
+            </div>
+          </details>
+
+          <details>
+            <summary>2,000 CI/CD minutes/month</summary>
+            <div class="detail-body">
+              Use execution minutes with GitHub Actions to automate workflows.
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- TEAM -->
+      <div class="card">
+        <div class="card-top">
+          <h2>Team</h2>
+          <p>Advanced collaboration for<br>individuals and organizations</p>
+
+          <div class="price">
+            <sup>$</sup><span class="num">4</span><span class="usd">USD</span><span class="per">per user/month</span>
+          </div>
+        </div>
+
+        <div class="btnrow">
+          <a class="btn black" href="#">Continue with Team</a>
+        </div>
+
+        <div class="card-body">
+          <div class="note">← Everything included in Free, plus...</div>
+
+          <details>
+            <summary>Access to GitHub Codespaces</summary>
+            <div class="detail-body">
+              Blazing fast cloud developer environments with flexible compute and pre-configured containers.
+            </div>
+          </details>
+
+          <details>
+            <summary>Repository rules</summary>
+            <div class="detail-body">
+              Enforce restrictions on how branches and tags are merged across your organization.
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="card recommended">
+        <div class="badge">Recommended</div>
+
+        <div class="card-top" style="padding-top:42px;">
+          <h2>Enterprise</h2>
+          <p>Security, compliance,<br>and flexible deployment</p>
+
+          <span class="starting">Starting at</span>
+
+          <div class="price">
+            <sup>$</sup><span class="num">21</span><span class="usd">USD</span><span class="per">per user/month</span>
+          </div>
+        </div>
+
+        <div class="btnrow">
+          <a class="btn black" href="#">Start a free trial</a>
+          <a class="btn white" href="#">Contact Sales</a>
+        </div>
+
+        <div class="card-body">
+          <div class="note">← Everything included in Team, plus...</div>
+
+          <details>
+            <summary>Data residency</summary>
+            <div class="detail-body">
+              Choose a regional cloud deployment for data residency and store in-scope data at rest in a designated location.
+            </div>
+          </details>
+
+          <details>
+            <summary>Enterprise Managed Users</summary>
+            <div class="detail-body">
+              Control user accounts of enterprise members through your identity provider (IdP).
+            </div>
+          </details>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ADDONS -->
+    <section class="addons">
+      <h2>Additional add-ons</h2>
+
+      <div class="addon-grid">
+        <div class="addon-card">
+          <div class="addon-icon">
+            <img src="https://static.thenounproject.com/png/1155091-200.png" alt="">
+          </div>
+          <h3>GitHub Copilot</h3>
+          <p>Get started for free with up to 2,000 completions and 50 chat requests per month.</p>
+          <a href="#">Compare plans ›</a>
+        </div>
+
+        <div class="addon-card">
+          <div class="addon-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/838/838544.png" alt="">
+          </div>
+          <h3>GitHub Models</h3>
+          <p>Bring industry-leading AI into your workflow, securely and with full developer control.</p>
+          <a href="#">Learn more ›</a>
+        </div>
+
+        <div class="addon-card">
+          <div class="addon-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/547/547380.png" alt="">
+          </div>
+          <h3>GitHub Advanced Security</h3>
+          <p>Gain peace of mind with our security, privacy, and responsible AI policies.</p>
+          <a href="#">Learn more ›</a>
+        </div>
+
+        <div class="addon-card">
+          <div class="addon-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/4829/4829008.png" alt="">
+          </div>
+          <h3>GitHub Codespaces</h3>
+          <p>Starting at $0.18 per hour of compute and $0.07 per GB of storage.</p>
+          <a href="#">Learn more ›</a>
+        </div>
+
+        <div class="addon-card">
+          <div class="addon-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="">
+          </div>
+          <h3>Premium support</h3>
+          <p>Get expert help for Enterprise Cloud and Enterprise—any hour your team needs it.</p>
+          <a href="#">Learn more ›</a>
+        </div>
+
+        <div class="addon-card">
+          <div class="addon-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/3151/3151254.png" alt="">
+          </div>
+          <h3>Git LFS</h3>
+          <p>$5 per month for 50 GB bandwidth and 50 GB of storage.</p>
+          <a href="#">Learn more ›</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

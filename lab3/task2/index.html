@@ -6,27 +6,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="header">
-    <h1>I love Capys, cats and ????</h1>
+    <h1>ToDo List</h1>
 </header>
 
 <main class="container">
     <form id="todo-form" class="todo-form">
-        <label for="todo-input">New task</label>
-        <div class="input-group">
-            <input 
-                type="text" 
-                id="todo-input" 
-                placeholder="Enter a task..." 
-                required
-            >
-            <button type="submit">Add</button>
-        </div>
-    </form>
+    <label for="todo-input">ToDo List</label>
+    <div class="input-group">
+        <input type="text" id="todo-input" placeholder="New Task" required>
+        <button type="submit">Add</button>
+        
+    </div>
+    <div>
+    <span id="todo-stats" class="stats">Total: 0, Incompleted: 0</span>
+    </div>
+</form>
 
-    <ul id="todo-list" class="todo-list">
-    </ul>
+</form>
+
+
+    <ul id="todo-list" class="todo-list"></ul>
 </main>
 
 <script src="script.js"></script>

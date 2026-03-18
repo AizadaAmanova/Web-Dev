@@ -1,0 +1,783 @@
+body{
+  font-family: "Mona Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  padding-bottom: 150px;
+}
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+
+      .global {
+        display: grid;
+        grid-template-areas:
+          "nav"
+          "main-text"
+          "cards";
+      }
+      .left-bar {
+        display: flex;
+        align-items: baseline;
+      }
+      ul {
+        margin: 0;
+        display: flex;
+        gap: 10px;
+        list-style: none;
+      }
+      li {
+        padding: 8px;
+        font-size: 16px;
+        font-weight: 400;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+      .nav {
+        padding: 16px 32px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .github {
+        margin-right: 16px;
+      }
+      .right-bar {
+        display: flex;
+        align-items: center;
+      }
+      .search {
+        padding-left: 8px;
+        border: 0.8px solid rgba(209, 217, 224, 0.7);
+        height: 32px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 320px;
+        border-radius: 8px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .search-text {
+        display: flex;
+        align-items: center;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        color: rgb(89, 99, 110);
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .lupa {
+        margin-right: 8px;
+        margin-bottom: 0;
+      }
+      .slash {
+        width: 20px;
+        height: 20px;
+        border-radius: 6px;
+        border: 0.8px solid rgba(209, 217, 224, 0.7);
+        margin-right: 8px;
+      }
+      .s {
+        font-size: 20px;
+        color: grey;
+        text-align: center;
+      }
+      .line {
+        background-color: rgb(209, 217, 224);
+        width: 1px;
+        height: 20px;
+        margin: 0 8px;
+      }
+      .dash {
+        padding: 6px 12px;
+        border-color: rgb(209, 217, 224);
+        background-color: rgba(0, 0, 0, 0);
+        width: auto;
+        height: auto;
+        border-radius: 6px;
+        border-width: 0.8px;
+      }
+      .main-text {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px 120px 80px;
+        padding: 80px 16px 0;
+      }
+      .h {
+        text-align: center;
+        font-family:
+          "Mona Sans",
+          "Mona Sans Header Fallback",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 68px;
+        letter-spacing: -5px;
+      }
+      .b {
+        margin: 40px 0 0;
+        padding: 0 96px;
+        width: auto;
+        font-size: 18px;
+        font-family:
+          "Mona Sans",
+          "Mona Sans Header Fallback",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        font-weight: 400;
+        text-align: center;
+        line-height: 24px;
+        color: rgb(89, 99, 110);
+      }
+      .trial {
+        margin: 24px 0 0;
+        padding: 16px 24px;
+        border-radius: 6px;
+        background-color: rgb(27, 31, 35);
+        border-color: white;
+        font-weight: 500;
+        line-height: 16px;
+        text-align: center;
+        font-size: 16px;
+        font-family:
+          "Mona Sans",
+          "Mona Sans Header Fallback",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: white;
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          var(--color-mktg-btn-bg) !important;
+      }
+
+      .cards {
+        margin: 0px 120px;
+        padding: 0px 16px;
+        display: flex;
+        justify-content: center;
+      }
+      .cards-inside {
+        display: flex;
+        justify-content: center;
+        margin: 0px -8px;
+        padding: 0px;
+        align-items: stretch;
+      }
+      .card-out {
+        margin: 0px;
+        padding: 0px 8px;
+        width: 421px;
+      }
+      .card1 {
+        padding: 32px 8px;
+        margin: 0;
+        height: auto;
+      }
+      .card2 {
+        padding: 32px 8px;
+        margin: 0;
+        height: auto;
+      }
+      .card3 {
+        padding: 0px 8px 8px;
+        margin: 0;
+        height: auto;
+        background-image: radial-gradient(
+          circle,
+          #2188ff 0%,
+          #2188ff 48%,
+          #0d74ec 85%,
+          #0d74ec 98%
+        ) !important;
+        border-radius: 12px;
+      }
+      .card1-inside {
+        border-radius: 12px;
+        box-shadow: 1px 6px 20px rgba(209, 217, 224, 0.8);
+        color: rgb(31, 35, 40);
+        display: flex;
+        flex-direction: column;
+        font-family:
+          "Mona Sans",
+          "Mona Sans Header Fallback",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        justify-content: space-between;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+        height: auto;
+        border-width: 2px;
+      }
+      .card2-inside {
+        border-radius: 12px;
+        box-shadow: 1px 6px 20px rgba(209, 217, 224, 0.8);
+        color: rgb(31, 35, 40);
+        display: flex;
+        flex-direction: column;
+        font-family:
+          "Mona Sans",
+          "Mona Sans Header Fallback",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        justify-content: space-between;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+        height: auto;
+        border-width: 2px;
+      }
+      .card3-inside {
+        border-radius: 12px;
+        box-shadow: 1px 6px 20px rgba(209, 217, 224, 0.8);
+        color: rgb(31, 35, 40);
+        display: flex;
+        flex-direction: column;
+        font-family:
+          "Mona Sans",
+          "Mona Sans Header Fallback",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        justify-content: space-between;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+        height: auto;
+        border-width: 2px;
+        background: white;
+      }
+      .header {
+        padding: 24px 16px;
+        margin: 0px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .free {
+        margin: 0px 0px 8px;
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: -0.24px;
+        text-align: center;
+      }
+      .tex {
+        margin: 0px 0px 8px;
+        padding: 0px 0px 24px;
+        font-family:
+          "Mona Sans",
+          "Mona Sans Header Fallback",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17.5px;
+        color: rgb(89, 99, 110);
+      }
+      .tex1 {
+        margin: 0px 0px 8px;
+        padding: 0px 0px 0px;
+        font-family:
+          "Mona Sans",
+          "Mona Sans Header Fallback",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17.5px;
+        color: rgb(89, 99, 110);
+      }
+      .cost {
+        font-family:
+          "Mona Sans",
+          "Mona Sans Header Fallback",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: center;
+      }
+      .mb-0 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: center;
+      }
+      .inner-cost {
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: 600;
+        justify-content: center;
+        text-align: center;
+      }
+      .first-cost {
+        margin: 0px 8px 0px 0px;
+        display: flex;
+        align-items: center;
+        font-size: 48px;
+        font-weight: 400;
+        letter-spacing: -0.48px;
+        line-height: 64px;
+        text-align: center;
+        color: rgb(31, 35, 40);
+      }
+      .dollar {
+        font-size: 20px;
+        letter-spacing: -0.48px;
+        margin: 0px 4px 0px 0px;
+        position: relative;
+        text-align: center;
+        top: -10px;
+        color: rgb(89, 99, 110);
+      }
+      .usd {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        margin: 0px 0px 8px 4px;
+        align-self: flex-end;
+      }
+      .per-month {
+        color: rgb(89, 99, 110);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        display: block;
+        align-content: center;
+      }
+
+      .create {
+        font-size: 14px;
+        font-weight: 400;
+        margin: 8px 0px 0px;
+        line-height: 21px;
+        text-align: center;
+      }
+
+      .send-create {
+        display: block;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        padding: 16px 24px;
+        background-size: auto;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        border: 1px solid rgb(209, 217, 224);
+        border-radius: 6px;
+        line-height: 16px;
+        text-align: center;
+        text-decoration-color: rgb(31, 35, 40);
+        color: rgb(31, 35, 40);
+        text-decoration-style: solid;
+        border-image-repeat: stretch;
+        transition: border-color 0.9s ease;
+      }
+
+      .send-create-team {
+        display: block;
+        width: 100%;
+        background-color: rgb(27, 31, 35);
+        padding: 16px 24px;
+        background-size: auto;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        border: 1px solid rgb(209, 217, 224);
+        border-radius: 6px;
+        line-height: 16px;
+        text-align: center;
+        text-decoration-color: rgb(31, 35, 40);
+        color: white;
+        text-decoration-style: solid;
+        border-image-repeat: stretch;
+        transition: border-color 0.9s ease;
+      }
+
+      .send-create:hover {
+        border: 2px solid rgb(31, 35, 40);
+      }
+
+      .about {
+        padding: 8px 16px;
+        background-color: rgb(246, 248, 250);
+        border-radius: 6px;
+        color: rgb(31, 35, 40);
+        display: block;
+        flex-basis: auto;
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+
+      .sum-div {
+        padding: 8px 0;
+      }
+
+      .arrow {
+        margin: 0px 8px 0px 0px;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+        list-style: none;
+        display: flex;
+      }
+
+      summary::before {
+        content: "›";
+        margin-right: 8px;
+        transition: transform 0.2s ease;
+      }
+
+      details[open] summary::before {
+        transform: rotate(90deg);
+      }
+
+      .sum-text {
+        color: rgb(89, 99, 110);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21px;
+        display: block;
+        text-align: left;
+      }
+
+      .all-text {
+        margin: 0px 0px 10px 24px;
+        color: rgb(89, 99, 110);
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+      }
+
+      .about ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+      }
+      li {
+        margin: 0;
+        padding: 0;
+      }
+      .subtext {
+        color: rgb(89, 99, 110);
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: left;
+      }
+
+      .feature {
+        margin: 24px 0px 0px;
+        text-align: left;
+        color: rgb(9, 105, 218);
+        font-weight: 600;
+        line-height: 21px;
+        font-size: 14px;
+      }
+
+      .prev {
+        text-align: left;
+        margin: 16px 0px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        color: rgb(31, 35, 40);
+      }
+      .prev-s::before {
+        content: "⇐";
+      }
+
+      .start {
+        display: inline;
+        padding: 4px 16px;
+        border: 0.8px rgb(209, 217, 224) solid;
+        border-radius: 12px;
+      }
+
+      .rec {
+        display: block;
+        color: white;
+        text-align: center;
+        margin: 0 0 10px 0;
+        padding: 0 0;
+        top: 6px;
+        /* position: absolute; */
+        line-height: 21px;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family:
+          "Mona Sans",
+          "Mona Sans Header Fallback",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
+      }
+
+      .but {
+        margin: 20px 0 12px;
+        text-align: center;
+        line-height: 21px;
+        font-family:
+          "Mona Sans",
+          "Mona Sans Header Fallback",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .but-in {
+        margin: 0 -8px 0;
+        display: flex;
+        flex: row;
+        flex-wrap: wrap;
+        color: rgb(31, 35, 40);
+        text-align: center;
+        justify-content: center;
+      }
+      .left-but {
+        display: block;
+        text-align: center;
+        padding: 0 8px;
+      }
+
+      .left-but-link {
+        padding: 16px 30px;
+        background-image:
+          linear-gradient(
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          none;
+        text-align: center;
+        text-decoration: none;
+        background-color: rgb(27, 31, 35);
+        color: white;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .right-but-link {
+        padding: 16px 30px;
+        background-image:
+          linear-gradient(
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          none;
+        text-align: center;
+        text-decoration: none;
+        background-color: white;
+        color: rgb(27, 31, 35);
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 700;
+
+        border: 1px grey solid;
+      }
+      .left-but-link::before {
+        content: "";
+      }
+      
+.addons{
+  margin-top: 64px;
+  text-align: center;
+}
+
+.addons h2{
+  font-family: "Mona Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+}
+
+.addon-grid{
+  max-width: 1200px;      /* ✅ 2-фото сияқты “ортада” тұрады */
+  margin: 0 auto;         /* ✅ центр */
+  padding: 0 16px;        /* ✅ шеттері әдемі */
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.addon-card{
+  background: #fff;
+  border: 1px solid #d0d7de;
+  border-radius: 10px;
+  padding: 24px;          /* ✅ үлкен емес */
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(27, 31, 36, 0.08);
+  transition: 0.2s ease;
+}
+
+.addon-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 18px rgba(27, 31, 36, 0.14);
+}
+
+.addon-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: #eef1f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.addon-icon img{
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.addon-card h3{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.addon-card p{
+  color: #57606a;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.addon-card a{
+  color: #24292f;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (max-width: 900px){
+  .addon-grid{
+    grid-template-columns: 1fr;
+  }
+}

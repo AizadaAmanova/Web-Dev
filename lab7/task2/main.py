@@ -2,24 +2,25 @@ from models import Animal, Dog, Cat
 
 
 def main():
-    animal = Animal("Buddy", 5, "brown")
-    dog = Dog("Rocky", 3, "black", "Labrador")
-    cat = Cat("Misty", 2, "white", True)
+    # создаем объекты
+    dog = Dog("Buddy", 3, "Brown", "Labrador")
+    cat = Cat("Luna", 2, "White", 9)
+    animal = Animal("Generic", 5, "Gray")
 
-    animals = [animal, dog, cat]
+   
+    animals = [dog, cat, animal]
 
-    for item in animals:
-        print(item)
-        print(item.speak())
-        print(item.move())
-
-        if isinstance(item, Dog):
-            print(item.fetch())
-
-        if isinstance(item, Cat):
-            print(item.climb())
-
+   
+    for a in animals:
+        print(a) 
+        print(a.eat())
+        print(a.sleep())
+        print(a.speak()) 
         print("-" * 30)
+
+    
+    print(dog.fetch())
+    print(cat.scratch())
 
 
 if __name__ == "__main__":
