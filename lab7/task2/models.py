@@ -1,4 +1,3 @@
-# Base class
 class Animal:
     def __init__(self, name, age, color):
         self.name = name
@@ -18,7 +17,6 @@ class Animal:
         return f"Animal(name={self.name}, age={self.age}, color={self.color})"
 
 
-# Child class 1
 class Dog(Animal):
     def __init__(self, name, age, color, breed):
         super().__init__(name, age, color)
@@ -31,7 +29,6 @@ class Dog(Animal):
         return f"{self.name} is fetching a ball"
 
 
-# Child class 2
 class Cat(Animal):
     def __init__(self, name, age, color, lives_left):
         super().__init__(name, age, color)
