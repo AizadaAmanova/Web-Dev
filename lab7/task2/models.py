@@ -25,7 +25,7 @@ class Dog(Animal):
         self.breed = breed
 
     def speak(self):
-        return f"{self.name} says Woof 🐶"
+        return f"{self.name} says Woof"
 
     def fetch(self):
         return f"{self.name} is fetching a ball"
@@ -38,7 +38,7 @@ class Cat(Animal):
         self.lives_left = lives_left
 
     def speak(self):
-        return f"{self.name} says Meow 🐱"
+        return f"{self.name} says Meow"
 
     def scratch(self):
-        return f"{self.name} is scratching furniture 😈"
+        return f"{self.name} is scratching furniture"

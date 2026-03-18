@@ -2,9 +2,8 @@ from models import Animal, Dog, Cat
 
 
 def main():
-    # создаем объекты
-    dog = Dog("Buddy", 3, "Brown", "Labrador")
-    cat = Cat("Luna", 2, "White", 9)
+    dog = Dog("Bunny", 3, "Brown", "Labrador")
+    cat = Cat("Teddy", 2, "White", 9)
     animal = Animal("Generic", 5, "Gray")
 
    
